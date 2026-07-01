@@ -20,13 +20,13 @@ func headHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "นี่คือหัวหน้า")
 }
 
-//dev-junior-2
+// dev-junior-2
 func somsriHandler(w http.ResponseWriter, r *http.Request) {
-    w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-    fmt.Fprint(w, "นี่คือสมาชิก: สมศรี")
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	fmt.Fprint(w, "นี่คือสมาชิก: สมศรี")
 }
 
-/ dev-junior-1
+// dev-junior-1
 func somchaiHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 	fmt.Fprint(w, "นี่คือสมาชิก: สมชาย")
