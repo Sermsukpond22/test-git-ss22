@@ -20,9 +20,17 @@ func headHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "นี่คือหัวหน้า")
 }
 
+//dev-junior-2
+func somsriHandler(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+    fmt.Fprint(w, "นี่คือสมาชิก: สมศรี")
+}
+
+
 func main() {
 	http.HandleFunc("/head", headHandler)
-
+	http.HandleFunc("/somsri", somsriHandler)
+	
 	fmt.Println("Server is running on http://localhost:8080...")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
